@@ -1,0 +1,3 @@
+# Local blog staging helpers
+.blog-posts-cache.json
+blog-email-drafts/
