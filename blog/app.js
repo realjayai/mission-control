@@ -31,7 +31,7 @@ async function loadJson(path){const r=await fetch(path,{cache:'no-store'}); if(!
 async function unlock(password){
   await decrypt(password,await loadJson('../data.json'));
   savedPassword=password;
-  status.textContent='unlocked'; status.classList.add('ok'); unlock.classList.add('hidden'); app.classList.remove('hidden');
+  $('status').textContent='unlocked'; $('status').classList.add('ok'); $('unlock').classList.add('hidden'); $('app').classList.remove('hidden');
   let manifest={posts:[]};
   try{manifest=await decrypt(password,await loadJson('posts/index.enc.json'));}catch{manifest={posts:[]};}
   renderList(manifest.posts||[]);
@@ -57,4 +57,4 @@ async function selectPost(slug,posts,btn){
     document.title=`${doc.title||meta.title} | Five One Nine blog staging`;
   }catch(e){post.innerHTML='<p class="empty">Could not decrypt this draft. Check the password or republish the post.</p>';}
 }
-unlockForm.addEventListener('submit',async e=>{e.preventDefault(); msg.textContent='Unlocking...'; try{await unlock(password.value); msg.textContent='';}catch{msg.textContent='Wrong password or dashboard verifier unavailable.';}});
+$('unlockForm').addEventListener('submit',async e=>{e.preventDefault(); $('msg').textContent='Unlocking...'; try{await unlock($('password').value); $('msg').textContent='';}catch{$('msg').textContent='Wrong password or dashboard verifier unavailable.';}});
