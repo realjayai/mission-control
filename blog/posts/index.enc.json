@@ -1,0 +1,10 @@
+{
+  "v": 1,
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 310000,
+  "salt": "3geOByrFknczoxIUQnmtRA==",
+  "iv": "JfRR4l0nplGzPxdI",
+  "tag": "2sa57SUcl2Rk3XpoGQl13A==",
+  "data": "17ivf2ELXHuE4JukhZPO7sT6kvXYIb4lrjXSx7zXsKUvAeAxgWMCg7XRakigtPKekdcTNibRRoZFyW7CcFhcEGzkRN/AUt8eC4iIVqs1lEgNSXxXNocmoqoJqsXNAQEr5CxR1Ogxm0c7qTkrtmp0zENpyQTePaUoOt8CHAuXdB4p5/0oJnfsENpH/jlFozX1QgWK3OHrCYjg93xNzwIwPX/KO+HWP25Smwd/hpn3hmWWtd9L0msi4nxm3DxY1/RECHipAJEAWX34e9UIXRyHNXlCPZRKYyDfb9jhS1b4oBh4KxhO/LAIh/+ro9TQuKm4uwKM1H6AxuQuJlYn02uxD1iJxu2pnqPC+LMJT9Q/MK0hy5BTzLE8SMDXuk9eaeVjfmMSfEXwyvof73zFFksT+SYwJuvaA3vcTzxeaNK5SNXlmkLFhh4+ShxoOAvkgFKBcm7EvY6VyVr2GjQtxM0PtOXAnt4tcOCqnNxXIkJ+kR/crDwApAJoVQHYLdE+tNHIs5reqYFzdh9KtXgxHLWW",
+  "updatedAt": "2026-05-03T17:24:38.181Z"
+}
