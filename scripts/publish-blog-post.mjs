@@ -70,11 +70,24 @@ function passwordFromPrompt(){
   }
 }
 
+function passwordFromSecretFile(){
+  const secretPath = args.secretFile || process.env.BLOG_STAGE_PASSWORD_FILE || '/home/jay/.openclaw/secrets/blog-stage-password';
+  try {
+    const st = fs.statSync(secretPath);
+    if ((st.mode & 0o077) !== 0) throw new Error(`Secret file permissions are too open: ${secretPath}`);
+    return fs.readFileSync(secretPath,'utf8').trim();
+  } catch (e) {
+    if (e.code === 'ENOENT') return '';
+    throw e;
+  }
+}
+
 let password = process.env.BLOG_STAGE_PASSWORD || process.env.MISSION_CONTROL_PASSWORD || '';
+if (!password) password = passwordFromSecretFile();
 if (!password && args.fromUnlockedDashboard !== 'false') password = await passwordFromUnlockedDashboard();
 if (!password && args.prompt !== 'false') password = passwordFromPrompt();
 if (!password) {
-  throw new Error('No staging password available. Unlock Mission Control in Chrome or run this from a TTY and enter the password prompt.');
+  throw new Error('No staging password available. Add /home/jay/.openclaw/secrets/blog-stage-password, unlock Mission Control in Chrome, or run this from a TTY and enter the password prompt.');
 }
 
 const src = path.resolve(root,args.file);
