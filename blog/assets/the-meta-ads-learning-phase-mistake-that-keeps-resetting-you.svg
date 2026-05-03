@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Stop resetting the learning</title><desc id="desc">patience beats panic edits</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAFAF8"/><stop offset="0.55" stop-color="#CBE1E8"/><stop offset="1" stop-color="#A8CDD7"/></linearGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 0.08"/></feComponentTransfer></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect width="1600" height="900" filter="url(#grain)" opacity="0.35"/>
+<circle cx="1310" cy="158" r="158" fill="#F57F5B" opacity="0.18"/>
+<circle cx="196" cy="724" r="230" fill="#2E3C41" opacity="0.08"/>
+<path d="M1110 674 C1215 615 1345 612 1450 680" fill="none" stroke="#F57F5B" stroke-width="18" stroke-linecap="round" opacity="0.86"/>
+<rect x="108" y="104" width="1384" height="692" rx="54" fill="#FFFFFF" opacity="0.78" stroke="#E2E5E8" stroke-width="3"/>
+<text x="156" y="178" font-family="Poppins, Arial, sans-serif" font-size="26" letter-spacing="7" font-weight="700" fill="#F57F5B">FIVE ONE NINE</text>
+<text x="156" y="414" font-family="Poppins, Arial, sans-serif" font-size="92" font-weight="800" fill="#2E3C41"><tspan x="156" dy="0">Stop resetting the learning</tspan><tspan x="156" dy="104"></tspan></text>
+<text x="160" y="650" font-family="Poppins, Arial, sans-serif" font-size="38" font-weight="400" fill="#414042">patience beats panic edits</text>
+<g transform="translate(1120 300)">
+  <rect x="0" y="0" width="260" height="260" rx="42" fill="#2E3C41" opacity="0.94"/>
+  <path d="M70 145 L122 190 L200 74" fill="none" stroke="#F57F5B" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

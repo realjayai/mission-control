@@ -21,6 +21,7 @@ function markdown(md){
     if(/^##\s+/.test(line)){close(); html+='<h2>'+inline(line.replace(/^##\s+/,''))+'</h2>'; continue;}
     if(/^#\s+/.test(line)){close(); html+='<h1>'+inline(line.replace(/^#\s+/,''))+'</h1>'; continue;}
     if(/^>\s?/.test(line)){close(); html+='<blockquote>'+inline(line.replace(/^>\s?/,''))+'</blockquote>'; continue;}
+    const img=line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/); if(img){close(); html+=`<figure class="featured-image"><img src="${esc(img[2])}" alt="${esc(img[1])}" loading="lazy"><figcaption>${esc(img[1])}</figcaption></figure>`; continue;}
     if(/^[-*]\s+/.test(line)){if(list!=='ul'){close(); list='ul'; html+='<ul>';} html+='<li>'+inline(line.replace(/^[-*]\s+/,''))+'</li>'; continue;}
     if(/^\d+\.\s+/.test(line)){if(list!=='ol'){close(); list='ol'; html+='<ol>';} html+='<li>'+inline(line.replace(/^\d+\.\s+/,''))+'</li>'; continue;}
     close(); html+='<p>'+inline(line)+'</p>';
